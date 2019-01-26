@@ -3,16 +3,16 @@ package diana.springframework.dependencyinjectiondemo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import diana.springframework.dependencyinjectiondemo.services.GreetingServiceImpl;
+import diana.springframework.dependencyinjectiondemo.services.GreetingService;
 
 @Controller
 public class PropertyInjectedController {
 	@Autowired
-	private GreetingServiceImpl greetingService;
+	private GreetingService greetingServiceImpl;
 
 	public void sayHello() {
 		System.out.println("This is Property Injected Controller!");
-		greetingService.sayGreeting();
+		greetingServiceImpl.sayGreeting();
 	}
 
 }
