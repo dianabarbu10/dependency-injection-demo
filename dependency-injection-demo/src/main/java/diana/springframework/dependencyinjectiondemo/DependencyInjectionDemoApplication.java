@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import diana.springframework.dependencyinjectiondemo.examplebeans.FakeDataSource;
+import diana.springframework.dependencyinjectiondemo.examplebeans.FakeDataSourceOther;
 
 @SpringBootApplication
 public class DependencyInjectionDemoApplication {
@@ -23,6 +24,10 @@ public class DependencyInjectionDemoApplication {
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx
 				.getBean("fakeDataSource");
 		System.out.println(fakeDataSource.toString());
+
+		FakeDataSourceOther fakeDataSource_other = (FakeDataSourceOther) ctx
+				.getBean("fakeDataSourceOther");
+		System.out.println(fakeDataSource_other.toString());
 	}
 
 }
